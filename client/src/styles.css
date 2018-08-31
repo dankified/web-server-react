@@ -1,0 +1,38 @@
+*, ::after, ::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0; 
+}
+
+#error-card {
+	font-size: 1.5em;
+}
+
+#create-book-form {
+  margin-bottom: 2em;
+}
+
+.book-card {
+  position: relative;
+}
+
+.book-card h3 {
+	display: inline;
+}
+
+.book-card i {
+  position: absolute;
+  right: 5px;
+  top: 10%;
+  transition: font-size .2s ease;
+}
+
+.book-card i:hover {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.cards .selected {
+	color: red;
+}
+

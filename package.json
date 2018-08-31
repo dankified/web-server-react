@@ -1,0 +1,25 @@
+{
+  "name": "web-server-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:client": "cd ./client && npm install",
+    "install:server": "npm install",
+    "install:deps": "npm install concurrently -D && concurrently \"npm run install:server\" \"npm run install:client\"",
+    "start:server": "nodemon index.js",
+    "start:client": "cd ./client && npm start",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1",
+    "nodemon": "^1.18.3"
+  }
+}
