@@ -18,6 +18,7 @@ export default class App extends Component {
 			},
 			error: ""
 		};
+		
 		this.clearError = this.clearError.bind(this);
     this.deleteBook = this.deleteBook.bind(this);
     this.createBook = this.createBook.bind(this);
@@ -43,7 +44,7 @@ export default class App extends Component {
     axios.delete(`/books/${title}`).then(res => {
       if (title === this.state.selectedBook.title)
         this.setState({ selectedBook: {} });
-      this.setState({ books: res.data }, this.clearError());
+      	this.setState({ books: res.data }, this.clearError());
     }, (err) => {
 			this.setState({error: err.message})
 		});
